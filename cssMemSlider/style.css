@@ -1,0 +1,46 @@
+* {
+	margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    background: linear-gradient(90deg,#682e46,#b6715b,#e0ca80);
+}
+
+.wrapper {
+    width: 50vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 1vw;
+    background:linear-gradient(90deg, #f598a8, #f6edb2);
+    transition: 0.5s;
+}
+
+.container-sliders {
+    width: 250vw;
+    height: 70vh; 
+    display: flex;
+    background:linear-gradient(90deg, #faf0cd, #fab397);
+}
+
+.container-sliders_slide {
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+img {
+    margin: 0 auto;
+    max-width: 100%;
+}
+  

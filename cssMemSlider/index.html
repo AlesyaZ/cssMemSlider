@@ -4,9 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>cssMemSlider</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    
+    <div class="wrapper">
+
+        <input type="radio" name="point" id="slide-img1" checked>
+        <input type="radio" name="point" id="slide-img2">
+        <input type="radio" name="point" id="slide-img3">
+        <input type="radio" name="point" id="slide-img4">
+        <input type="radio" name="point" id="slide-img5">
+
+        <div class="container-sliders">
+            <div class="container-sliders_slide slide-img1">
+                <img src="./assets/image1.png" alt="image1">
+            </div>
+            <div class="container-sliders_slide slide-img2">
+                <img src="./assets/image2.png" alt="image2">
+            </div>
+            <div class="container-sliders_slide slide-img3">
+                <img src="./assets/image3.png" alt="image3">
+            </div>
+            <div class="container-sliders_slide slide-img4">
+                <img src="./assets/image4.png" alt="image4">
+            </div>
+            <div class="container-sliders_slide slide-img5">
+                <img src="./assets/image5.png" alt="image5">
+            </div>
+        </div>
+
+        <div class="container-nav">
+            <div class="container-nav_discription-img">
+                <p class="container-nav_text activ"> Я: *сдвигаю &ltdiv&gt на один пиксель* Сайт:</p>
+                <p class="container-nav_text"> Хотфикс за два часа до дедлайна:</p>
+                <p class="container-nav_text" >npm install eslint-config-airbnb:</p>
+                <p class="container-nav_text"> Когда накосячил со стилями в CSS</p>
+                <p class="container-nav_text"> ​Когда пытаешься выбрать JavaScript-фреймворк:</p>
+            </div>
+            <div class="controls">
+                <label for="slide-img1"><div class="controls_control"></div></label>
+                <label for="slide-img2"><div class="controls_control"></div></label>
+                <label for="slide-img3"><div class="controls_control"></div></label>
+                <label for="slide-img4"><div class="controls_control"></div></label>
+                <label for="slide-img5"><div class="controls_control"></div></label>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
