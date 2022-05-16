@@ -1,46 +1,160 @@
 * {
 	margin: 0;
 	padding: 0;
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction:column;
-    background: linear-gradient(90deg,#682e46,#b6715b,#e0ca80);
+  display:flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction:column;
+  background: linear-gradient(90deg,#682e46,#b6715b,#e0ca80);
 }
 
 .wrapper {
-    width: 50vw;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    border-radius: 1vw;
-    background:linear-gradient(90deg, #f598a8, #f6edb2);
-    transition: 0.5s;
+  display: flex;
+  width: 50vw;
+  height: 80vh;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 1vw;
+  background:linear-gradient(90deg, #f598a8, #f6edb2);
+  transition: 0.5s;
 }
 
 .container-sliders {
-    width: 250vw;
-    height: 70vh; 
-    display: flex;
-    background:linear-gradient(90deg, #faf0cd, #fab397);
+  display: flex;
+  width: 250vw;
+  height: 70vh; 
+  background:linear-gradient(90deg, #faf0cd, #fab397);
 }
 
 .container-sliders_slide {
-    width: 50vw;
-    display: flex;
-    justify-content: center;
-    transition: 0.5s;
+  display: flex;
+  width: 50vw;
+  justify-content: center;
+  transition: 0.5s;
 }
 
 img {
-    margin: 0 auto;
-    max-width: 100%;
+  margin: 0 auto;
+  max-width: 100%;
 }
-  
+
+input[name="point"] {
+  visibility: hidden;
+  height: 0%;
+  width: 0%;
+}
+
+.container-nav {
+  display: flex;
+  width: 50vw;
+  height: 10vh;
+  padding: 0 1vw;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.controls {
+  display: flex;
+  max-width: 10em;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2em;
+  width: 2em;
+  transition: ease-in-out 0.5s;
+  cursor: pointer;
+}
+
+.controls_control {
+  height: 1em;
+  width: 1em;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  transition: ease-in-out 0.5s;
+}
+
+label:hover .controls_control {
+  background-color: rgb(253, 240, 56);
+  transform: scale(1.2);
+  box-shadow: 0em 0em 0.5em rgb(250, 91, 11);
+}
+
+label:active .controls_control {
+  transform: scale(1);
+}
+
+#slide-img1:checked ~ div > div > label[for="slide-img1"] > .controls_control,
+#slide-img2:checked ~ div > div > label[for="slide-img2"] > .controls_control,
+#slide-img3:checked ~ div > div > label[for="slide-img3"] > .controls_control,
+#slide-img4:checked ~ div > div > label[for="slide-img4"] > .controls_control,
+#slide-img5:checked ~ div > div > label[for="slide-img5"] > .controls_control {
+  background-color: rgb(249, 130, 91);
+  border: 2px solid #b6715b;
+  transform: scale(1.1)
+}
+
+#slide-img1:checked ~ div > .slide-img1 {
+  margin-left: 0;
+}
+
+#slide-img2:checked ~ div > .slide-img1{
+  margin-left: -50vw;
+}
+
+#slide-img3:checked ~ div > .slide-img1 {
+  margin-left: -100vw;
+}
+
+#slide-img4:checked ~ div > .slide-img1 {
+  margin-left: -150vw;
+}
+
+#slide-img5:checked ~ div > .slide-img1 {
+  margin-left: -200vw;
+}
+
+.container-nav_discription {
+  height: 2.5vh;
+  width: 40vw;
+  overflow: hidden;
+}
+
+.container-nav_text {
+  width: 40vw;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  color: black;
+  transition: 0.5s;
+}
+
+#slide-img1:checked ~ div > div > .activ{
+  margin-top: 0;
+}
+
+#slide-img2:checked ~ div > div > .activ {
+  margin-top: -2.5vh;
+}
+
+#slide-img3:checked ~ div > div > .activ  {
+  margin-top: -5vh;
+}
+
+#slide-img4:checked ~ div > div > .activ  {
+  margin-top: -7.5vh;
+}
+
+#slide-img5:checked ~ div > div > .activ  {
+  margin-top: -10vh;
+}
